@@ -1,7 +1,7 @@
-# 1. 使用包含 Java 8 的 Linux 環境作為基底
-FROM openjdk:8-jdk
+# 1. 改用社群持續維護的 Eclipse Temurin Java 8 環境
+FROM eclipse-temurin:8-jdk
 
-# 2. 由於專案很古老，我們在環境內安裝編譯工具 Ant
+# 2. 安裝編譯工具 Ant
 RUN apt-get update && apt-get install -y ant && rm -rf /var/lib/apt/lists/*
 
 # 3. 設定伺服器在雲端運行的資料夾
